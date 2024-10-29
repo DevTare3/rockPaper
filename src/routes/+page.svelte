@@ -1,38 +1,39 @@
 <script lang="ts">
-    let score = $state('0');
-
-    let moves = [
-        {url:'../images/icon-lizard.svg' , name:'lizard'},
-        {url:'../images/icon-rock.svg', name:'rock'},
-        {url:'../images/icon-paper.svg', name:'paper'},
-        {url:'../images/icon-scissors.svg', name:'scissors'},
-        {url:'../images/icon-spock.svg', name:'spock'},
-    ]
+  import pentagon from "$lib/images/bg-pentagon.svg";
+  import rock from "$lib/images/icon-rock.svg";
+  import paper from "$lib/images/icon-paper.svg";
+  import scissors from "$lib/images/icon-scissors.svg";
+  import spock from "$lib/images/icon-spock.svg";
+  import lizard from "$lib/images/icon-lizard.svg";
+  let score = $state("0");
+  let moves = [
+    { url: `${rock}`, name: "Rock" },
+    { url: `${paper}`, name: "Paper" },
+    { url: `${scissors}`, name: "Scissors" },
+    { url: `${spock}`, name: "Spock" },
+    { url: `${lizard}`, name: "Lizard" },
+  ];
 </script>
+
 <main>
+  <div>
+    <img src={pentagon} alt="background layer of the game" />
     <div>
-        <img src="../images/icon-spock.svg" alt="aaa">
-        <img src="../images/logo-bonus.svg" alt="The logo of the game!">
-        <div>
-            <p>SCORE</p>
-            <p>{score}</p>
-        </div>
+      <p>SCORE</p>
+      <p>{score}</p>
     </div>
-    
+  </div>
+
+  <div>
     <div>
-        <div><img src="../images/bg-pentagon.svg" alt="background layer of the game"></div>
-        {#each moves as move}
-            <button><img src={move.url} alt={move.name}></button>
-            {/each}
+      <img src="../images/bg-pentagon.svg" alt="background layer of the game" />
     </div>
+    {#each moves as move}
+      <button><img src={move.url} alt={move.name} /></button>
+    {/each}
+  </div>
 </main>
 <footer>
-    <p>RULES</p>
+  <p>RULES</p>
 </footer>
-You Picked
-The House Picked
-
-You Win
-You Lose
-
-Play Again
+<p>You Picked The House Picked You Win You Lose Play Again</p>
