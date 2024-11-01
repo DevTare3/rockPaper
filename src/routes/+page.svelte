@@ -5,6 +5,7 @@
   import scissors from "$lib/images/icon-scissors.svg";
   import spock from "$lib/images/icon-spock.svg";
   import lizard from "$lib/images/icon-lizard.svg";
+  import * as AlertDialog from "$lib/components/ui/alert-dialog/index.js";
   let score = $state("0");
   let moves = [
     { url: `${rock}`, name: "Rock" },
@@ -13,6 +14,7 @@
     { url: `${spock}`, name: "Spock" },
     { url: `${lizard}`, name: "Lizard" },
   ];
+  import Game from "./components/mainGameComponent/game.svelte";
 </script>
 
 <main>
@@ -23,6 +25,22 @@
       <p>{score}</p>
     </div>
   </div>
+  <AlertDialog.Root>
+    <AlertDialog.Trigger>Show Dialog</AlertDialog.Trigger>
+    <AlertDialog.Content>
+      <AlertDialog.Header>
+        <AlertDialog.Title>Are you absolutely sure?</AlertDialog.Title>
+        <AlertDialog.Description>
+          This action cannot be undone. This will permanently delete your
+          account and remove your data from our servers.
+        </AlertDialog.Description>
+      </AlertDialog.Header>
+      <AlertDialog.Footer>
+        <AlertDialog.Cancel>Cancel</AlertDialog.Cancel>
+        <AlertDialog.Action>Continue</AlertDialog.Action>
+      </AlertDialog.Footer>
+    </AlertDialog.Content>
+  </AlertDialog.Root>
 
   <div>
     <div>
