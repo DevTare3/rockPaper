@@ -5,7 +5,8 @@
   import scissors from "$lib/images/icon-scissors.svg";
   import spock from "$lib/images/icon-spock.svg";
   import lizard from "$lib/images/icon-lizard.svg";
-  let score = $state("0");
+  import logo from "$lib/images/logo-bonus.svg";
+  let score = $state("12");
   let moves = [
     { url: `${rock}`, name: "Rock" },
     { url: `${paper}`, name: "Paper" },
@@ -13,21 +14,21 @@
     { url: `${spock}`, name: "Spock" },
     { url: `${lizard}`, name: "Lizard" },
   ];
-  import Game from "./components/mainGameComponent/game.svelte";
+  import Rules from "./components/rulesComponent/rules.svelte";
 </script>
 
-<header class="px-16 py-12">
-  <div class="flex justify-between p-2 outline-1 outline">
-    <h1 class="text-white text-xl">
-      ROCK <br /> PAPER <br /> SCCISSORS <br /> LIZARD <br /> SPOCK
-    </h1>
-    <div>
-      <p>SCORE</p>
-      <p>{score}</p>
+<header class="px-12 py-8">
+  <div
+    class="flex justify-between items-center p-4 outline-4 outline outline-header-outline rounded-sm"
+  >
+    <div class="w-16"><img src={logo} alt="logo of the game" /></div>
+    <div class="bg-white py-2 px-6 rounded-md text-center">
+      <p class="text-score-text font-bold text-base tracking-widest">SCORE</p>
+      <p class="text-5xl font-bold text-dk-text">{score}</p>
     </div>
   </div>
 </header>
-<main class="px-16 py-12">
+<main class="px-12 py-8">
   <div>
     <div>
       <img src={pentagon} alt="background layer of the game" />
@@ -38,6 +39,6 @@
   </div>
 </main>
 <footer class="px-16 py-12">
-  <Game />
+  <Rules />
 </footer>
 <p>You Picked The House Picked You Win You Lose Play Again</p>
