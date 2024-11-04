@@ -8,11 +8,36 @@
   import logo from "$lib/images/logo-bonus.svg";
   let score = $state("12");
   let moves = [
-    { url: `${rock}`, name: "Rock" },
-    { url: `${paper}`, name: "Paper" },
-    { url: `${scissors}`, name: "Scissors" },
-    { url: `${spock}`, name: "Spock" },
-    { url: `${lizard}`, name: "Lizard" },
+    {
+      url: `${rock}`,
+      name: "Rock",
+      gradient:
+        "bg-gradient-to-b from-rock-gradient-start to-rock-gradient-end",
+    },
+    {
+      url: `${paper}`,
+      name: "Paper",
+      gradient:
+        "bg-gradient-to-b from-paper-gradient-start to-paper-gradient-end",
+    },
+    {
+      url: `${scissors}`,
+      name: "Scissors",
+      gradient:
+        "bg-gradient-to-b from-scissors-gradient-start to-scissors-gradient-end",
+    },
+    {
+      url: `${spock}`,
+      name: "Spock",
+      gradient:
+        "bg-gradient-to-b from-spock-gradient-start to-spock-gradient-end",
+    },
+    {
+      url: `${lizard}`,
+      name: "Lizard",
+      gradient:
+        "bg-gradient-to-b from-lizard-gradient-start to-lizard-gradient-end",
+    },
   ];
   import Rules from "./components/rulesComponent/rules.svelte";
 </script>
@@ -34,7 +59,11 @@
       <img src={pentagon} alt="background layer of the game" />
     </div>
     {#each moves as move}
-      <button><img src={move.url} alt={move.name} /></button>
+      <div class=" {move.gradient} rounded-full p-3 w-fit">
+        <button class="bg-white rounded-full p-5 size-20"
+          ><img class="size-11/12" src={move.url} alt={move.name} /></button
+        >
+      </div>
     {/each}
   </div>
 </main>
