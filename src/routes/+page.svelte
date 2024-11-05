@@ -59,7 +59,7 @@
       <img src={pentagon} alt="background layer of the game" />
     </div>
     {#each moves as move}
-      <div class=" {move.gradient} rounded-full p-3 w-fit">
+      <div class=" {move.gradient} rounded-full p-3 w-fit absolute">
         <button class="bg-white rounded-full p-5 size-20"
           ><img class="size-11/12" src={move.url} alt={move.name} /></button
         >
