@@ -56,7 +56,7 @@
 <main class="px-12 py-8">
   <div>
     <div>
-      <img src={pentagon} alt="background layer of the game" />
+      <img class="relative" src={pentagon} alt="background layer of the game" />
     </div>
     {#each moves as move}
       <div class=" {move.gradient} rounded-full p-3 w-fit absolute">
