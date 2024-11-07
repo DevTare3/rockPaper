@@ -57,7 +57,7 @@
   <div>
     <div>
       <img
-        class="relative top-4"
+        class="relative top-4 bottom-0"
         src={pentagon}
         alt="background layer of the game"
       />
