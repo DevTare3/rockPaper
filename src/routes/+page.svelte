@@ -13,6 +13,7 @@
       name: "Rock",
       gradient:
         "bg-gradient-to-b from-rock-gradient-start to-rock-gradient-end",
+      position: "top-20",
     },
     {
       url: `${paper}`,
@@ -57,7 +58,7 @@
   <div>
     <div>
       <img
-        class="relative top-4 bottom-0 right-2 left-2 bottom-6 top-20"
+        class="relative top-4"
         src={pentagon}
         alt="background layer of the game"
       />
