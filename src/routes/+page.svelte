@@ -13,19 +13,21 @@
       name: "Rock",
       gradient:
         "bg-gradient-to-b from-rock-gradient-start to-rock-gradient-end",
-      position: "top-20",
+      position: "bottom-10 right-5",
     },
     {
       url: `${paper}`,
       name: "Paper",
       gradient:
         "bg-gradient-to-b from-paper-gradient-start to-paper-gradient-end",
+      position: "top-5 right-5",
     },
     {
       url: `${scissors}`,
       name: "Scissors",
       gradient:
         "bg-gradient-to-b from-scissors-gradient-start to-scissors-gradient-end",
+      position: "top-10",
     },
     {
       url: `${spock}`,
