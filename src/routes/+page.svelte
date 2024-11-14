@@ -34,12 +34,14 @@
       name: "Spock",
       gradient:
         "bg-gradient-to-b from-spock-gradient-start to-spock-gradient-end",
+      position: "left-10",
     },
     {
       url: `${lizard}`,
       name: "Lizard",
       gradient:
         "bg-gradient-to-b from-lizard-gradient-start to-lizard-gradient-end",
+      position: "left-5 bottom-5",
     },
   ];
   import Rules from "./components/rulesComponent/rules.svelte";
