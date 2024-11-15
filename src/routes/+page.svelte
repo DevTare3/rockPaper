@@ -41,7 +41,7 @@
       name: "Lizard",
       gradient:
         "bg-gradient-to-b from-lizard-gradient-start to-lizard-gradient-end",
-      position: "left-5 bottom-5",
+      position: "left-5 bottom-5 right-2",
     },
   ];
   import Rules from "./components/rulesComponent/rules.svelte";
