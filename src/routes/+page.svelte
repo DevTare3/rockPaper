@@ -69,7 +69,7 @@
     </div>
     {#each moves as move}
       <div
-        class=" {move.gradient} {move.position} rounded-full p-3 w-fit absolute top-2"
+        class=" {move.gradient} {move.position} rounded-full p-3 w-fit absolute top-2 right-3"
       >
         <button class="bg-white rounded-full p-5 size-20"
           ><img class="size-11/12" src={move.url} alt={move.name} /></button
